@@ -5,7 +5,10 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import com.example.cooktak.R
+import kotlinx.android.synthetic.main.fragment_main1.*
+import kotlinx.android.synthetic.main.fragment_main1.view.*
 
 
 class Main1Fragment : Fragment() {
@@ -18,7 +21,8 @@ class Main1Fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main1, container, false)
+        val view = inflater.inflate(R.layout.fragment_main1, container, false)
+
+        return view
     }
 }

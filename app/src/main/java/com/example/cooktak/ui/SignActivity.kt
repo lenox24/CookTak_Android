@@ -1,9 +1,11 @@
 package com.example.cooktak.ui
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AnimationUtils
 import com.example.cooktak.R
+import com.example.cooktak.ui.Main.MainActivity
 import kotlinx.android.synthetic.main.activity_sign.*
 
 class SignActivity : AppCompatActivity() {
@@ -20,6 +22,10 @@ class SignActivity : AppCompatActivity() {
         btn_ani_main1.setOnClickListener {
             orange1.startAnimation(AnimationUtils.loadAnimation(this, R.anim.anime_trans_up))
             orange2.startAnimation(AnimationUtils.loadAnimation(this, R.anim.anime_trans_down))
+        }
+
+        btn_login_login.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
         }
     }
 }

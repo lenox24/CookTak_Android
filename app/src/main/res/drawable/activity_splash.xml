@@ -2,5 +2,6 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@color/colorPrimaryDark"/>
     <item android:gravity="center"
-          android:drawable="@drawable/x1_cooktak_logo"/>
+          android:drawable="@drawable/cooktak_logo_word"
+          android:id="@+id/logo_splash"/>
 </layer-list>

@@ -14,12 +14,12 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.LoginActivity">
+        <activity android:name=".ui.SignActivity">
         </activity>
         <activity
                 android:name=".ui.SplashActivity"
-                android:screenOrientation="portrait"
-                android:theme="@style/SplashTheme">
+                android:theme="@style/SplashTheme"
+                android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

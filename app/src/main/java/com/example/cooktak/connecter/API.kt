@@ -1,6 +1,7 @@
 package com.example.cooktak.connecter
 
 import com.example.cooktak.model.barcodeModel
+import com.example.cooktak.model.registerModel
 import com.google.gson.JsonObject
 import retrofit2.Call
 import retrofit2.http.Body
@@ -10,4 +11,7 @@ interface API {
     //바코드 스캔
     @POST("/search")
     fun putCode(@Body body: JsonObject): Call<barcodeModel>
+
+    @POST("/signin")
+    fun registerUser(@Body body: JsonObject): Call<registerModel>
 }

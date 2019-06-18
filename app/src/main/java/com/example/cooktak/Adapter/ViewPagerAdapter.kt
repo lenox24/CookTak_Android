@@ -4,18 +4,18 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
 import android.view.ViewGroup
-import com.example.cooktak.ui.Main.Main1Fragment
-import com.example.cooktak.ui.Main.Main2Fragment
-import com.example.cooktak.ui.Main.Main3Fragment
+import com.example.cooktak.ui.Main.SearchFragment
+import com.example.cooktak.ui.Main.RecommendFragment
+import com.example.cooktak.ui.Main.PostsFragment
 
-val fragmentList = arrayListOf("1", "2", "3")
+val fragmentList = arrayListOf("검색", "추천", "게시판")
 
 class ViewPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
     override fun getItem(p0: Int): Fragment? {
         return when (p0 % 3) {
-            0 -> Main1Fragment()
-            1 -> Main2Fragment()
-            2 -> Main3Fragment()
+            0 -> SearchFragment()
+            1 -> RecommendFragment()
+            2 -> PostsFragment()
             else -> null
         }
     }

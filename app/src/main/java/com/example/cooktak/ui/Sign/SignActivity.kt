@@ -1,8 +1,9 @@
-package com.example.cooktak.ui
+package com.example.cooktak.ui.Sign
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.app.Fragment
 import android.view.animation.AnimationUtils
 import com.example.cooktak.R
 import com.example.cooktak.ui.Main.MainActivity
@@ -24,8 +25,14 @@ class SignActivity : AppCompatActivity() {
             orange2.startAnimation(AnimationUtils.loadAnimation(this, R.anim.anime_trans_down))
         }
 
+        val manager = supportFragmentManager
+
         btn_login_login.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            val fragment = manager.beginTransaction()
+            val fragment_register = RegisterFragment()
+            fragment.add(R.id.fragment_register, fragment_register)
+            fragment.addToBackStack(null)
+            fragment.commit()
         }
     }
 }

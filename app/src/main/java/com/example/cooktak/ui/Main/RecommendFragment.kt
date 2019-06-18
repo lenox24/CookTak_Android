@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.cooktak.R
 
 
-class Main2Fragment : Fragment() {
+class RecommendFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +20,6 @@ class Main2Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main2, container, false)
+        return inflater.inflate(R.layout.fragment_recommed, container, false)
     }
 }

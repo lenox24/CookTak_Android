@@ -8,8 +8,7 @@ import android.view.ViewGroup
 import com.example.cooktak.R
 
 
-class Main3Fragment : Fragment() {
-
+class SearchFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -19,7 +18,8 @@ class Main3Fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main3, container, false)
+        val view = inflater.inflate(R.layout.fragment_search, container, false)
+
+        return view
     }
 }

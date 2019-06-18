@@ -1,9 +1,10 @@
-package com.example.cooktak.ui
+package com.example.cooktak.ui.Splash
 
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import com.example.cooktak.R
+import com.example.cooktak.ui.Sign.SignActivity
 
 class SplashActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {

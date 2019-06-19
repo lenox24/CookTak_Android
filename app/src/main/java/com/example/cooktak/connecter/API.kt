@@ -9,9 +9,9 @@ import retrofit2.http.POST
 
 interface API {
     //바코드 스캔
-    @POST("/search")
+    @POST("/api/search")
     fun putCode(@Body body: JsonObject): Call<barcodeModel>
 
-    @POST("/signin")
-    fun registerUser(@Body body: JsonObject): Call<registerModel>
+    @POST("/api/signup")
+    fun registerUser(@Body body: JsonObject): Call<Void>
 }

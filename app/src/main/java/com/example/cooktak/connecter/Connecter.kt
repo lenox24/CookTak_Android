@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object Connector {
     var retrofit: Retrofit
     var api: API
-    val url: String = "https://cooktak.slowmotion.dev"
+    val url: String = "https://cooktak.herokuapp.com"
 
     init {
         val interceptor = HttpLoggingInterceptor()

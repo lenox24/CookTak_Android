@@ -5,5 +5,5 @@ data class registerModel(
     var pwd: String,
     var nick: String,
     var age: Int,
-    var gender: Boolean
+    var gender: Int
 )

@@ -14,9 +14,11 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.Sign.LoginActivity">
+        <activity android:name=".ui.Sign.SignUpActivity">
         </activity>
-        <activity android:name=".ui.Sign.SignActivity">
+        <activity android:name=".ui.Sign.SignInActivity">
+        </activity>
+        <activity android:name=".ui.Sign.SelectSignActivity">
         </activity>
         <activity
                 android:name=".ui.Splash.SplashActivity"

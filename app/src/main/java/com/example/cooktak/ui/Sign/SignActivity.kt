@@ -28,11 +28,7 @@ class SignActivity : AppCompatActivity() {
         val manager = supportFragmentManager
 
         btn_login_login.setOnClickListener {
-            val fragment = manager.beginTransaction()
-            val fragment_register = RegisterFragment()
-            fragment.add(R.id.fragment_register, fragment_register)
-            fragment.addToBackStack(null)
-            fragment.commit()
+            startActivity(Intent(this, LoginActivity::class.java))
         }
     }
 }

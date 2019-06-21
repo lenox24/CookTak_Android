@@ -9,7 +9,7 @@ import retrofit2.http.POST
 
 interface API {
     //바코드 스캔
-    @POST("/api/search")
+    @POST("/api/icon_search_main")
     fun putCode(@Body body: JsonObject): Call<barcodeModel>
 
     @POST("/api/signup")

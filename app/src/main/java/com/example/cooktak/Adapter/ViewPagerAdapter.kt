@@ -8,8 +8,6 @@ import com.example.cooktak.ui.Main.SearchFragment
 import com.example.cooktak.ui.Main.RecommendFragment
 import com.example.cooktak.ui.Main.PostsFragment
 
-val fragmentList = arrayListOf("검색", "추천", "게시판")
-
 class ViewPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
     override fun getItem(p0: Int): Fragment? {
         return when (p0 % 3) {
@@ -28,7 +26,4 @@ class ViewPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
         super.destroyItem(container, position, `object`)
     }
 
-    override fun getPageTitle(position: Int): CharSequence? {
-        return fragmentList[position]
-    }
 }

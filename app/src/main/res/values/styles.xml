@@ -21,11 +21,11 @@
         <item name="windowNoTitle">false</item>
         <item name="windowActionBar">true</item>
 
-        <item name="colorPrimary">@color/colorPrimaryDark</item>    <!-- 배경 -->
+        <item name="colorPrimary">#FFFFFF</item>    <!-- 배경 -->
 
-        <item name="android:textColorPrimary">@android:color/white</item> <!-- 선택된 텍스트 색 -->
-        <item name="android:textColorSecondary">@android:color/white</item> <!-- 탭바 텍스트 -->
+        <item name="android:textColorPrimary">@color/colorPrimaryDark</item> <!-- 선택된 텍스트 색 -->
+        <item name="android:textColorSecondary">@color/colorPrimaryDark</item> <!-- 탭바 텍스트 -->
 
-        <item name="colorAccent">@android:color/white</item>     <!-- 막대기 색 -->
+        <item name="colorAccent">@color/colorPrimaryDark</item>     <!-- 막대기 색 -->
     </style>
 </resources>

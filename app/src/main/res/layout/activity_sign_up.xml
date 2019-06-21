@@ -108,7 +108,6 @@
                     android:text="  * 비밀번호 자릿수 최소 8 ~ 최대 20자리"
                     android:textColor="@color/colorPrimaryDark"
                     android:layout_marginStart="46dp"
-                    android:layout_marginTop="10dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/edt_pwd_register"
                     app:layout_constraintBottom_toTopOf="@id/tex_conPwd_register"/>
@@ -186,12 +185,12 @@
                     android:id="@+id/tex_nickInfo_register"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="* 닉네임은 최소 2자리 ~ 최대 12자리"
+                    android:text=" * 닉네임은 최소 2자리 ~ 최대 12자리"
                     android:textColor="@color/colorPrimaryDark"
                     android:layout_marginStart="46dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/layout_nick_register"
-                    app:layout_constraintBottom_toTopOf="@id/tex_age_register" android:layout_marginTop="10dp"/>
+                    app:layout_constraintBottom_toTopOf="@id/tex_age_register"/>
 
             <TextView
                     android:id="@+id/tex_age_register"

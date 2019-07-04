@@ -33,44 +33,6 @@ class SearchFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_search, container, false)
-
-
-        captureManager = CaptureManager(activity, barcodeView)
-        captureManager.initializeFromIntent(Intent(), savedInstanceState)
-        captureManager.decode()
-
-
-        view.barcodeView.setOnTouchListener { v, event ->
-            barcodeView.decodeSingle(object : BarcodeCallback {
-                override fun barcodeResult(result: BarcodeResult?) {
-                    result?.let {
-
-
-                    }
-                }
-
-                override fun possibleResultPoints(resultPoints: MutableList<ResultPoint>?) {
-
-                }
-            })
-            true
-        }
         return view
     }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        captureManager.onDestroy()
-    }
-
-    override fun onResume() {
-        super.onResume()
-        captureManager.onResume()
-    }
-
-    override fun onPause() {
-        super.onPause()
-        captureManager.onResume()
-    }
-
 }

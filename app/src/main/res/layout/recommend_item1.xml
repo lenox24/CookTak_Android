@@ -8,7 +8,7 @@
         android:layout_height="wrap_content">
 
     <ImageView
-            android:id="@+id/gridImg"
+            android:id="@+id/img_item1"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginEnd="8dp"
@@ -23,7 +23,7 @@
             app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-            android:id="@+id/gridName"
+            android:id="@+id/tex_title_item1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -34,11 +34,11 @@
             android:padding="2dp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gridImg"
+            app:layout_constraintTop_toBottomOf="@+id/img_item1"
             tools:text="Title"/>
 
     <TextView
-            android:id="@+id/gridSub"
+            android:id="@+id/tex_sub_item1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
@@ -47,7 +47,7 @@
             android:layout_marginBottom="5dp"
             android:padding="2dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gridName"
+            app:layout_constraintTop_toBottomOf="@+id/tex_title_item1"
             tools:text="Subtitle" tools:ignore="SmallSp"
             app:layout_constraintBottom_toBottomOf="parent"/>
 

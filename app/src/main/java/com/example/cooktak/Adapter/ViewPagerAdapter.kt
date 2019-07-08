@@ -4,16 +4,16 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
 import android.view.ViewGroup
+import com.example.cooktak.ui.Main.BarcodeFragment
+import com.example.cooktak.ui.Main.CommunityFragment
 import com.example.cooktak.ui.Main.SearchFragment
-import com.example.cooktak.ui.Main.RecommendFragment
-import com.example.cooktak.ui.Main.PostsFragment
 
 class ViewPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
     override fun getItem(p0: Int): Fragment? {
         return when (p0 % 3) {
-            0 -> SearchFragment()
-            1 -> RecommendFragment()
-            2 -> PostsFragment()
+            0 -> BarcodeFragment()
+            1 -> SearchFragment()
+            2 -> CommunityFragment()
             else -> null
         }
     }

@@ -2,6 +2,6 @@
     <string name="app_name">CookTak</string>
 
     <string name="register">
-        <u>회원가입</u>
+        <u>로그인</u>
     </string>
 </resources>

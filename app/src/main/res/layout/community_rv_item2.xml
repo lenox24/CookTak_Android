@@ -23,13 +23,13 @@
             app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-            android:id="@+id/tex_title_item1"
+            android:id="@+id/tex_title1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="8dp"
-            android:background="@drawable/round_title"
+            android:background="@drawable/rounded_title_error"
             android:textSize="13sp"
             android:padding="2dp"
             android:textStyle="bold"
@@ -38,16 +38,16 @@
             tools:text="Title"/>
 
     <TextView
-            android:id="@+id/tex_sub_item1"
+            android:id="@+id/tex_sub1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:background="@drawable/round_title"
+            android:background="@drawable/rounded_title_error"
             android:textSize="10sp"
             android:layout_marginBottom="5dp"
             android:padding="2dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tex_title_item1"
+            app:layout_constraintTop_toBottomOf="@+id/tex_title1"
             tools:text="Subtitle" tools:ignore="SmallSp"
             app:layout_constraintBottom_toBottomOf="parent"/>
 

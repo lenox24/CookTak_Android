@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import com.example.cooktak.Adapter.RecommendRVAdapter
 import com.example.cooktak.R
 import com.example.cooktak.model.RecommendModel
-import kotlinx.android.synthetic.main.fragment_recommend.view.*
+import kotlinx.android.synthetic.main.fragment_community.view.*
 
 
 class CommunityFragment : Fragment() {
@@ -24,14 +24,12 @@ class CommunityFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_recommend, container, false)
+        val view = inflater.inflate(R.layout.fragment_community, container, false)
 
         val viewList: ArrayList<RecommendModel> = arrayListOf()
-        lateinit var model: RecommendModel
 
         for (i in 0..10) {
-            model = RecommendModel(R.drawable.example, "test $i", "test $i")
-            viewList.add(model)
+            viewList.add(RecommendModel(R.drawable.example, "test $i", "test $i"))
         }
 
         var flag = true

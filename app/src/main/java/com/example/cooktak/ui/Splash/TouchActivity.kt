@@ -16,7 +16,7 @@ class TouchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_touch)
 
-        layout_touch.setOnTouchListener { v, event ->
+        layout_touch.setOnTouchListener { v, _ ->
             startActivity(Intent(this@TouchActivity, MainActivity::class.java))
             finish()
             true

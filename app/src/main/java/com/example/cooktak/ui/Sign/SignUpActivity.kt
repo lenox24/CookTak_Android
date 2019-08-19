@@ -3,10 +3,10 @@ package com.example.cooktak.ui.Sign
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.widget.DatePicker
 import android.widget.Toast
 import com.example.cooktak.R
 import com.example.cooktak.connecter.Connector
-import com.example.cooktak.model.registerModel
 import com.google.gson.JsonObject
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import retrofit2.Call
@@ -19,9 +19,17 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
+        val datePick = findViewById<DatePicker>(R.id.date_birth_register)
+        datePick.init(datePick.year, datePick.month, datePick.dayOfMonth,DatePicker.OnDateChangedListener {
+            @Override
+            fun onDateChangedListener() {
+
+            }
+        })
+
         btn_check_register.setOnClickListener {
             if (edt_email_register.text.isNotEmpty() && edt_pwd_register.text.isNotEmpty() && edt_conPwd_register.text.isNotEmpty()
-                && edt_nick_register.text.isNotEmpty() && edt_age_register.text.isNotEmpty() && radio_group_register.checkedRadioButtonId != null
+                && edt_nick_register.text.isNotEmpty()
             ) {
 
                 if (edt_pwd_register.text.toString() == edt_conPwd_register.text.toString()) {
@@ -29,7 +37,6 @@ class SignUpActivity : AppCompatActivity() {
                     obj.addProperty("email", edt_email_register.text.toString())
                     obj.addProperty("pwd", edt_pwd_register.text.toString())
                     obj.addProperty("nick", edt_nick_register.text.toString())
-                    obj.addProperty("age", edt_age_register.text.toString().toInt())
                     when (radio_group_register.checkedRadioButtonId) {
                         R.id.radio_btn_man -> obj.addProperty("gender", 1)
                         R.id.radio_btn_woman -> obj.addProperty("gender", 2)

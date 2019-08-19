@@ -196,25 +196,25 @@
                     android:id="@+id/tex_age_register"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="나이"
+                    android:text="생년월일"
                     android:textColor="@color/colorPrimaryDark"
                     android:textStyle="bold"
                     android:layout_marginStart="46dp"
                     android:layout_marginTop="10dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tex_nickInfo_register"
-                    app:layout_constraintBottom_toTopOf="@id/edt_age_register"/>
+                    app:layout_constraintBottom_toTopOf="@id/date_birth_register"/>
 
-            <EditText
-                    android:id="@+id/edt_age_register"
+            <DatePicker
+                    android:id="@+id/date_birth_register"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     app:layout_constraintHeight_max="55dp"
                     app:layout_constraintHeight_min="45dp"
-                    android:hint="나이를 입력해주세요."
-                    android:inputType="number"
                     android:layout_marginStart="46dp"
                     android:layout_marginTop="10dp"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tex_age_register"
                     app:layout_constraintBottom_toTopOf="@id/radio_group_register"
@@ -230,7 +230,7 @@
                     android:layout_marginStart="46dp"
                     android:layout_marginTop="10dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/edt_age_register"
+                    app:layout_constraintTop_toBottomOf="@+id/date_birth_register"
                     app:layout_constraintBottom_toTopOf="@id/radio_group_register"/>
 
             <RadioGroup

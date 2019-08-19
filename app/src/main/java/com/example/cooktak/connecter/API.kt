@@ -12,6 +12,6 @@ interface API {
     @POST("/api/icon_search_main")
     fun putCode(@Body body: JsonObject): Call<barcodeModel>
 
-    @POST("/api/signup")
+    @POST("/api/v1/user/new")
     fun registerUser(@Body body: JsonObject): Call<Void>
 }

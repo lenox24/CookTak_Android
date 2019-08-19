@@ -28,7 +28,6 @@ class RecommendRVAdapter(
         } else {
             LayoutInflater.from(context).inflate(R.layout.community_rv_item, parent, false)
         }
-
         return ViewHolder(view)
     }
 
@@ -36,6 +35,7 @@ class RecommendRVAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindView(viewList[position])
+
         if (!flag) {
             var starFlag = false
             holder.itemView.img_star2.onClick {
@@ -58,18 +58,15 @@ class RecommendRVAdapter(
         }
 
         holder.itemView.setOnClickListener {
-            if (!flag) {
+            if (flag) {
+                Toast.makeText(context, "Title : ${holder.itemView.tex_title1.text}", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(context, "Title : ${holder.itemView.tex_title2.text}", Toast.LENGTH_SHORT).show()
                 if (position == expandedPosition) {
                     holder.expandItem!!.visibility = View.INVISIBLE
                 } else {
                     holder.expandItem!!.visibility = View.GONE
                 }
-            }
-
-            if (flag) {
-                Toast.makeText(context, "Title : ${holder.itemView.tex_title1.text}", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(context, "Title : ${holder.itemView.tex_title2.text}", Toast.LENGTH_SHORT).show()
 
                 if (expandedPosition >= 0) {
                     val prev = expandedPosition
@@ -94,7 +91,6 @@ class RecommendRVAdapter(
                 itemView.tex_title2.text = recommendModel.name
                 itemView.tex_sub2.text = recommendModel.sub
             }
-
         }
     }
 }

@@ -3,19 +3,46 @@
              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".ui.Main.SearchFragment">
-
+             tools:context=".ui.Main.SearchFragment" android:id="@+id/frameLayout">
     <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
         <TextView
-                android:text="TextView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView" app:layout_constraintEnd_toEndOf="parent"
+                android:text="Search"
+                android:textColor="#585858"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                android:id="@+id/textView" app:layout_constraintHorizontal_bias="0.486"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-        />
+                android:layout_marginStart="24dp"
+                app:layout_constraintHorizontal_bias="1.0"
+                android:layout_marginEnd="24dp" android:id="@+id/linearLayout3"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+            <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9"
+                    android:inputType="textPersonName"
+                    android:hint="재료 또는 음식명 검색, #을 통해 태그 검색 가능 {ex} #삼각김밥"
+                    android:textSize="10sp"
+                    android:imeOptions="actionSearch"
+                    android:background="#E4E4e4"
+                    android:textColor="#808080"
+                    android:textColorHint="#808080"
+                    android:padding="3dp"
+                    android:drawableLeft="@drawable/ic_search_black_24dp"
+                    android:id="@+id/editText"/>
+        </LinearLayout>
+
     </android.support.constraint.ConstraintLayout>
 </FrameLayout>

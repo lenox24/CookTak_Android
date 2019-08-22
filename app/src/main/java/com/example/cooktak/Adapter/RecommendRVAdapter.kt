@@ -50,9 +50,9 @@ class RecommendRVAdapter(
                     starFlag = !starFlag
                 }
                 if (starFlag) {
-                    holder.itemView.img_star2.setImageResource(R.drawable.star1_error)
+                    holder.itemView.img_star2.setImageResource(R.drawable.star1)
                 } else {
-                    holder.itemView.img_star2.setImageResource(R.drawable.star2_error)
+                    holder.itemView.img_star2.setImageResource(R.drawable.star2)
                 }
             }
         }

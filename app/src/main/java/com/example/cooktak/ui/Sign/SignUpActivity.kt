@@ -3,6 +3,7 @@ package com.example.cooktak.ui.Sign
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.widget.DatePicker
 import android.widget.Toast
 import com.example.cooktak.R
@@ -40,7 +41,7 @@ class SignUpActivity : AppCompatActivity() {
                     obj.addProperty("nickName", edt_nick_register.text.toString())
                     obj.addProperty(
                         "birth",
-                        String.format("%d-%d-%d", datePick.year, datePick.month + 1, datePick.dayOfMonth)
+                        String.format("%04d-%02d-%02d", datePick.year, datePick.month + 1, datePick.dayOfMonth)
                     )
                     when (radio_group_register.checkedRadioButtonId) {
                         R.id.radio_btn_man -> obj.addProperty("sex", "m")
@@ -56,7 +57,10 @@ class SignUpActivity : AppCompatActivity() {
                                     Toast.makeText(this@SignUpActivity, "회원가입 성공", Toast.LENGTH_SHORT).show()
                                     startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
                                 }
-                                else -> Toast.makeText(this@SignUpActivity, "회원가입 실패", Toast.LENGTH_SHORT).show()
+                                else -> {
+                                    Toast.makeText(this@SignUpActivity, "회원가입 실패", Toast.LENGTH_SHORT).show()
+                                    Log.d("Connect Failure : ", response.body().toString())
+                                }
                             }
                         }
 
@@ -70,11 +74,7 @@ class SignUpActivity : AppCompatActivity() {
                 }
 
             } else {
-                Toast.makeText(
-                    this@SignUpActivity,
-                    "빈칸이 존재합니다." + String.format("%d-%d-%d", datePick.year, datePick.month + 1, datePick.dayOfMonth),
-                    Toast.LENGTH_SHORT
-                ).show()
+                Toast.makeText(this@SignUpActivity, "빈칸이 존재합니다.", Toast.LENGTH_SHORT).show()
             }
         }
     }

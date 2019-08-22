@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.activity_sign_up.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.util.*
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -20,12 +21,11 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_up)
 
         val datePick = findViewById<DatePicker>(R.id.date_birth_register)
-        datePick.init(datePick.year, datePick.month, datePick.dayOfMonth,DatePicker.OnDateChangedListener {
-            @Override
-            fun onDateChangedListener() {
+        val cal = Calendar.getInstance()
+        cal.time = Date()
+        val calendar = listOf(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH))
+        datePick.init(calendar[0], calendar[1], calendar[2], null)
 
-            }
-        })
 
         btn_check_register.setOnClickListener {
             if (edt_email_register.text.isNotEmpty() && edt_pwd_register.text.isNotEmpty() && edt_conPwd_register.text.isNotEmpty()
@@ -34,14 +34,20 @@ class SignUpActivity : AppCompatActivity() {
 
                 if (edt_pwd_register.text.toString() == edt_conPwd_register.text.toString()) {
                     val obj = JsonObject()
+                    obj.addProperty("id", "admin")
                     obj.addProperty("email", edt_email_register.text.toString())
-                    obj.addProperty("pwd", edt_pwd_register.text.toString())
-                    obj.addProperty("nick", edt_nick_register.text.toString())
+                    obj.addProperty("name", "Dart")
+                    obj.addProperty("nickName", edt_nick_register.text.toString())
+                    obj.addProperty(
+                        "birth",
+                        String.format("%d-%d-%d", datePick.year, datePick.month + 1, datePick.dayOfMonth)
+                    )
                     when (radio_group_register.checkedRadioButtonId) {
-                        R.id.radio_btn_man -> obj.addProperty("gender", 1)
-                        R.id.radio_btn_woman -> obj.addProperty("gender", 2)
-                        R.id.radio_btn_unknown -> obj.addProperty("gender", 3)
+                        R.id.radio_btn_man -> obj.addProperty("sex", "m")
+                        R.id.radio_btn_woman -> obj.addProperty("sex", "w")
+                        R.id.radio_btn_unknown -> obj.addProperty("sex", "u")
                     }
+                    obj.addProperty("password", edt_pwd_register.text.toString())
 
                     Connector.createApi().registerUser(obj).enqueue(object : Callback<Void> {
                         override fun onResponse(call: Call<Void>, response: Response<Void>) {
@@ -64,7 +70,11 @@ class SignUpActivity : AppCompatActivity() {
                 }
 
             } else {
-                Toast.makeText(this@SignUpActivity, "빈칸이 존재합니다.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this@SignUpActivity,
+                    "빈칸이 존재합니다." + String.format("%d-%d-%d", datePick.year, datePick.month + 1, datePick.dayOfMonth),
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
     }

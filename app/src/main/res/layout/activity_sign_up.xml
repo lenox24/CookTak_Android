@@ -208,9 +208,7 @@
             <DatePicker
                     android:id="@+id/date_birth_register"
                     android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    app:layout_constraintHeight_max="55dp"
-                    app:layout_constraintHeight_min="45dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="46dp"
                     android:layout_marginTop="10dp"
                     android:calendarViewShown="false"
@@ -218,7 +216,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tex_age_register"
                     app:layout_constraintBottom_toTopOf="@id/radio_group_register"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="46dp"/>
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="46dp"
+                    app:layout_constraintHorizontal_bias="0.0"/>
 
             <TextView
                     android:id="@+id/tex_gender_register"

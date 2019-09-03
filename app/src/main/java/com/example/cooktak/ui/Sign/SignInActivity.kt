@@ -15,6 +15,7 @@ class SignInActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             startActivity(Intent(this@SignInActivity, MainActivity::class.java))
+            finish()
         }
     }
 }

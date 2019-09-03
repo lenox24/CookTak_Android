@@ -11,7 +11,7 @@ class SplashActivity : Activity() {
         setTheme(R.style.SplashTheme)
         super.onCreate(savedInstanceState)
 
-        val intent = Intent(this, TouchActivity::class.java)
+        val intent = Intent(this, SelectSignActivity::class.java)
         startActivity(intent)
         finish()
     }

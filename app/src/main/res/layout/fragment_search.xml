@@ -41,7 +41,7 @@
                     android:textColorHint="#808080"
                     android:padding="3dp"
                     android:drawableLeft="@drawable/ic_search_black_24dp"
-                    android:id="@+id/editText"/>
+                    android:id="@+id/edt_search"/>
         </LinearLayout>
 
     </android.support.constraint.ConstraintLayout>

@@ -3,7 +3,7 @@
              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".ui.Main.BarcodeFragment">
+             tools:context=".ui.Main.Barcode.BarcodeFragment">
     <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -28,16 +28,14 @@
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginEnd="24dp" app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginStart="24dp"
-                android:background="#CCCCCC">
+                android:layout_marginStart="24dp">
 
             <com.journeyapps.barcodescanner.DecoratedBarcodeView
-                    android:id="@+id/barcodeView"
+                    android:id="@+id/zxing_barcode_scanner"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
-                    android:layout_margin="5dp"
-                    app:zxing_scanner_layout="@layout/custom_barcode_layout"/>
+                    app:zxing_scanner_layout="@layout/custom_barcode_scanner">
+            </com.journeyapps.barcodescanner.DecoratedBarcodeView>
         </LinearLayout>
-
     </android.support.constraint.ConstraintLayout>
 </FrameLayout>

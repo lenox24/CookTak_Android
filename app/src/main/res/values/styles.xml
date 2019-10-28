@@ -28,4 +28,6 @@
 
         <item name="colorAccent">@color/colorPrimaryDark</item>     <!-- 막대기 색 -->
     </style>
+
+    <style name="Material" parent="Theme.MaterialComponents.Light.DarkActionBar"/>
 </resources>

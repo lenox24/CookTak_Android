@@ -1,7 +1,6 @@
 package com.example.cooktak.connecter
 
 import com.example.cooktak.model.barcodeModel
-import com.example.cooktak.model.registerModel
 import com.google.gson.JsonObject
 import retrofit2.Call
 import retrofit2.http.Body

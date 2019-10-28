@@ -1,6 +1,7 @@
 package com.example.cooktak.ui.Main
 
 import android.os.Bundle
+import android.support.design.chip.Chip
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import com.example.cooktak.R
+import kotlinx.android.synthetic.main.fragment_search.*
 import kotlinx.android.synthetic.main.fragment_search.view.*
 
 

@@ -12,38 +12,23 @@ import kotlinx.android.synthetic.main.activity_select_sign.*
 
 class SelectSignActivity : AppCompatActivity() {
 
-    var lastTimeBackPressed : Long  = System.currentTimeMillis()
+    var lastTimeBackPressed: Long = System.currentTimeMillis()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_select_sign)
 
         btn_ani_main1.startAnimation(AnimationUtils.loadAnimation(this, R.anim.anime_trans_splash))
-        orange1.startAnimation(AnimationUtils.loadAnimation(this, R.anim.anime_trans_up))
-        orange2.startAnimation(AnimationUtils.loadAnimation(this, R.anim.anime_trans_down))
-        btn_register_login.startAnimation(
-            AnimationUtils.loadAnimation(
-                this,
-                R.anim.anime_alpha_logo
-            )
+        btn_login_login.startAnimation(
+            AnimationUtils.loadAnimation(this, R.anim.anime_alpha_logo)
         )
-        btn_login_login.startAnimation(AnimationUtils.loadAnimation(this, R.anim.anime_alpha_logo))
+
         tex_guest.startAnimation(AnimationUtils.loadAnimation(this, R.anim.anime_alpha_logo))
 
         touch_layout.setOnTouchListener { v, _ ->
             startActivity(Intent(this@SelectSignActivity, MainActivity::class.java))
             finish()
             true
-        }
-
-        btn_ani_main1.setOnClickListener {
-            orange1.startAnimation(AnimationUtils.loadAnimation(this, R.anim.anime_trans_up))
-            orange2.startAnimation(AnimationUtils.loadAnimation(this, R.anim.anime_trans_down))
-        }
-
-        btn_register_login.setOnClickListener {
-            val intent = Intent(this, SignUpActivity::class.java)
-            startActivity(intent)
         }
 
         btn_login_login.setOnClickListener {

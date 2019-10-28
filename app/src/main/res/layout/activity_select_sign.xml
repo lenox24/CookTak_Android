@@ -1,41 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-        android:id="@+id/touch_layout"
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/touch_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorPrimaryDark"
         tools:context=".ui.Sign.SelectSignActivity">
-
-    <ImageView
-            android:id="@+id/orange1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="267dp"
-            android:layout_marginBottom="579dp"
-            android:src="@drawable/lime"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-            android:id="@+id/orange2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="584dp"
-            android:layout_marginEnd="266dp"
-            android:src="@drawable/lime"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
             android:id="@+id/btn_ani_main1"
@@ -57,32 +28,19 @@
             app:layout_constraintVertical_bias="0.369" />
 
     <Button
-            android:id="@+id/btn_register_login"
-            android:layout_width="0dp"
+            android:id="@+id/btn_login_login"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
             android:layout_marginStart="100dp"
-            android:layout_marginTop="10dp"
             android:layout_marginEnd="100dp"
             android:background="@drawable/rounded_button"
-            android:hint="회원가입"
+            android:hint="로그인"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColorHint="#000000"
-            app:layout_constraintBottom_toTopOf="@+id/btn_login_login"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_ani_main1" />
-
-    <TextView
-            android:id="@+id/btn_login_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:padding="8dp"
-            android:text="로그인 하려면 터치"
-            android:textColor="#5882FA"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_register_login" />
 
     <TextView
             android:id="@+id/tex_guest"

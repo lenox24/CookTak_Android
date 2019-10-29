@@ -11,9 +11,10 @@ import com.example.cooktak.R
 import com.example.cooktak.model.searchModel
 import java.util.*
 
-class SearchAdapter (val context: Context, val list: ArrayList<searchModel>): BaseAdapter() {
+class SearchAdapter(val context: Context, private val list: ArrayList<searchModel>) :
+    BaseAdapter() {
     val inflater: LayoutInflater = LayoutInflater.from(context)
-    val searchList : ArrayList<searchModel> = list
+    val searchList: ArrayList<searchModel> = list
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         var view = convertView
@@ -21,18 +22,16 @@ class SearchAdapter (val context: Context, val list: ArrayList<searchModel>): Ba
         var item = searchList[position]
 
         if (view == null) {
-            view = inflater.inflate(R.layout.community_rv_item,null)
-
+            view = inflater.inflate(R.layout.community_rv_item, null)
         }
-
         return view!!
     }
 
-    override fun getItem(position: Int): Any = searchList!![position]
+    override fun getItem(position: Int): Any = searchList[position]
 
     override fun getItemId(position: Int): Long = position.toLong()
 
-    override fun getCount(): Int = searchList!!.size
+    override fun getCount(): Int = searchList.size
 
     inner class ViewHolder {
         lateinit var tex_title: TextView
@@ -41,14 +40,14 @@ class SearchAdapter (val context: Context, val list: ArrayList<searchModel>): Ba
 
     fun filter(charText: String) {
         val charStr = charText.toLowerCase(Locale.getDefault())
-        searchList!!.clear()
+        searchList.clear()
         if (charStr.isEmpty()) {
-            searchList!!.addAll(list!!)
+            searchList.addAll(list)
         } else {
-            list!!.forEach {
+            list.forEach {
                 val name: String = it.title
-                if(name.toLowerCase().contains(charStr)) {
-                    searchList!!.add(it)
+                if (name.toLowerCase().contains(charStr)) {
+                    searchList.add(it)
                 }
             }
         }

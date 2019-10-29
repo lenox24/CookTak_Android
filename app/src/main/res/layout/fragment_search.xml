@@ -3,9 +3,9 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/frameLayout"
-        android:theme="@style/Material"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:theme="@style/Material"
         tools:context=".ui.Main.SearchFragment">
 
     <android.support.constraint.ConstraintLayout
@@ -55,67 +55,74 @@
                     android:textSize="10sp" />
         </LinearLayout>
 
-        <android.support.design.chip.ChipGroup
-                android:id="@+id/chip_tag_search"
+        <com.google.android.flexbox.FlexboxLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="24dp"
                 android:layout_marginTop="10dp"
+                android:gravity="center"
+                app:flexWrap="wrap"
+                app:justifyContent="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.466"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
-            <android.support.design.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="파스타" />
+            <android.support.design.chip.ChipGroup
+                    android:id="@+id/chip_tag_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-            <android.support.design.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="피자" />
+                <android.support.design.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="파스타" />
 
-            <android.support.design.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="스테이크" />
+                <android.support.design.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="피자" />
 
-            <android.support.design.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="볶음밥" />
+                <android.support.design.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="스테이크" />
 
-            <android.support.design.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="면" />
+                <android.support.design.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="볶음밥" />
 
-            <android.support.design.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="빵" />
+                <android.support.design.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="면" />
 
-            <android.support.design.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="디저트" />
+                <android.support.design.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="빵" />
 
-            <android.support.design.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="알리오올리오" />
+                <android.support.design.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="디저트" />
 
-            <android.support.design.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="김치찌게" />
+                <android.support.design.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="알리오올리오" />
 
-            <android.support.design.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="와인" />
+                <android.support.design.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="김치찌게" />
 
-        </android.support.design.chip.ChipGroup>
+                <android.support.design.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="와인" />
+            </android.support.design.chip.ChipGroup>
+        </com.google.android.flexbox.FlexboxLayout>
     </android.support.constraint.ConstraintLayout>
 </FrameLayout>

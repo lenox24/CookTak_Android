@@ -33,7 +33,6 @@ class BarcodeFragment : Fragment() {
         if(resultCode == Activity.RESULT_OK) {
             val scanResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
             val re = scanResult.contents
-            val message = re
             Log.d("onActivityResult", "onActivityResult: .$re")
             Toast.makeText(this.activity, re, Toast.LENGTH_LONG).show()
         }

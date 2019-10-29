@@ -25,7 +25,7 @@ class SelectSignActivity : AppCompatActivity() {
 
         tex_guest.startAnimation(AnimationUtils.loadAnimation(this, R.anim.anime_alpha_logo))
 
-        touch_layout.setOnTouchListener { v, _ ->
+        touch_layout.setOnTouchListener { _, _ ->
             startActivity(Intent(this@SelectSignActivity, MainActivity::class.java))
             finish()
             true

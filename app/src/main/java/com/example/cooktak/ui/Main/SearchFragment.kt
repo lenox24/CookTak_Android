@@ -24,7 +24,7 @@ class SearchFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_search, container, false)
 
-        view.edt_search.setOnEditorActionListener { v, actionId, event ->
+        view.edt_search.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_SEARCH) {
                 val searchStr = view.edt_search.text.toString()
                 Toast.makeText(view.context,searchStr, Toast.LENGTH_SHORT).show()

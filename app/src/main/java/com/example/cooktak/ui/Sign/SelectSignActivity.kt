@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.animation.AnimationUtils
 import android.widget.Toast
 import com.example.cooktak.R
+import com.example.cooktak.model.barcodeModel
 import com.example.cooktak.ui.Main.MainActivity
 import kotlinx.android.synthetic.main.activity_select_sign.*
 

@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
 import android.view.ViewGroup
 import com.example.cooktak.ui.Main.Barcode.BarcodeFragment
-import com.example.cooktak.ui.Main.CommunityFragment
+import com.example.cooktak.ui.Main.Community.CommunityFragment
 import com.example.cooktak.ui.Main.SearchFragment
 
 class ViewPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {

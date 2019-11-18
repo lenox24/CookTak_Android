@@ -22,9 +22,9 @@ class BarcodeFragment : Fragment() {
     override fun onResume() {
         super.onResume()
 
-       // val integrator : IntentIntegrator = IntentIntegrator(this.activity)
-        //integrator.captureActivity = CustomScannerActivity::class.java
-        //integrator.initiateScan()
+       /* val integrator : IntentIntegrator = IntentIntegrator(this.activity)
+        integrator.captureActivity = CustomScannerActivity::class.java
+        integrator.initiateScan()*/
     }
 
     @SuppressLint("MissingSuperCall")

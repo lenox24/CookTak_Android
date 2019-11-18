@@ -1,6 +1,7 @@
 package com.example.cooktak.util
 
 import android.app.Activity
+import android.support.v4.app.Fragment
 import android.widget.Toast
 
 class BackPressCloseHandler(context : Activity) {

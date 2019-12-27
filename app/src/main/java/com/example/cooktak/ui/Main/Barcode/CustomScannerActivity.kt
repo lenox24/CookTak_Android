@@ -1,7 +1,7 @@
 package com.example.cooktak.ui.Main.Barcode
 
 import android.os.Bundle
-import android.support.v4.app.FragmentActivity
+import androidx.fragment.app.FragmentActivity
 import com.example.cooktak.R
 import com.example.cooktak.util.BackPressCloseHandler
 import com.journeyapps.barcodescanner.CaptureManager

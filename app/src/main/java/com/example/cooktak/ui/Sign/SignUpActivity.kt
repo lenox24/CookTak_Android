@@ -2,7 +2,7 @@ package com.example.cooktak.ui.Sign
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.widget.DatePicker
 import android.widget.Toast
@@ -79,3 +79,13 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 }
+
+/*
+val dateStr = "2019-03-17"
+val date = SimpleDateFormat("yyyy-MM-dd").parse(dateStr)
+val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX")
+sdf.timeZone = TimeZone.getTimeZone("CET")
+val dateText = sdf.format(date)
+println(dateText)
+
+ */

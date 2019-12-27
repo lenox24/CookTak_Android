@@ -2,7 +2,7 @@ package com.example.cooktak.ui.Sign
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.example.cooktak.R
 import com.example.cooktak.ui.Main.MainActivity
 import kotlinx.android.synthetic.main.activity_sign_in.*

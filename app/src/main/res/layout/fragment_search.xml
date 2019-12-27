@@ -8,7 +8,7 @@
         android:theme="@style/Material"
         tools:context=".ui.Main.SearchFragment">
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -68,61 +68,61 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
-            <android.support.design.chip.ChipGroup
+            <com.google.android.material.chip.ChipGroup
                     android:id="@+id/chip_tag_search"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                <android.support.design.chip.Chip
+                <com.google.android.material.chip.Chip
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="파스타" />
 
-                <android.support.design.chip.Chip
+                <com.google.android.material.chip.Chip
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="피자" />
 
-                <android.support.design.chip.Chip
+                <com.google.android.material.chip.Chip
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="스테이크" />
 
-                <android.support.design.chip.Chip
+                <com.google.android.material.chip.Chip
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="볶음밥" />
 
-                <android.support.design.chip.Chip
+                <com.google.android.material.chip.Chip
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="면" />
 
-                <android.support.design.chip.Chip
+                <com.google.android.material.chip.Chip
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="빵" />
 
-                <android.support.design.chip.Chip
+                <com.google.android.material.chip.Chip
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="디저트" />
 
-                <android.support.design.chip.Chip
+                <com.google.android.material.chip.Chip
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="알리오올리오" />
 
-                <android.support.design.chip.Chip
+                <com.google.android.material.chip.Chip
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="김치찌게" />
 
-                <android.support.design.chip.Chip
+                <com.google.android.material.chip.Chip
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="와인" />
-            </android.support.design.chip.ChipGroup>
+            </com.google.android.material.chip.ChipGroup>
         </com.google.android.flexbox.FlexboxLayout>
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

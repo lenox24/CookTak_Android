@@ -2,15 +2,17 @@ package com.example.cooktak.ui.Main.Community
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.cooktak.Adapter.RecommendRVAdapter
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.cooktak.Adapter.ExpandableAdapter
+import com.example.cooktak.Adapter.GridRecyclerViewAdapter
 import com.example.cooktak.R
-import com.example.cooktak.model.RecommendModel
+import com.example.cooktak.model.ItemModel
+import com.example.cooktak.model.TitleModel
 import kotlinx.android.synthetic.main.fragment_community.view.*
 
 
@@ -26,35 +28,54 @@ class CommunityFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_community, container, false)
 
-        val viewList: ArrayList<RecommendModel> = arrayListOf()
+        var flag = false
+        val viewList: ArrayList<TitleModel> = arrayListOf()
 
-        for (i in 0..10) {
-            viewList.add(RecommendModel(R.drawable.example, "test $i", "test $i"))
-        }
+        val arr: ArrayList<ItemModel> = arrayListOf()
+        arr.add(ItemModel("abac"))
+        viewList.add(TitleModel(R.drawable.example, "test1", "test1", arr))
 
-        var flag = true
+        val arr1: ArrayList<ItemModel> = arrayListOf()
+        arr1.add(ItemModel("adad"))
+        viewList.add(TitleModel(R.drawable.example, "test2", "test1", arr1))
 
-        view.recycler_recommend.adapter = RecommendRVAdapter(view.context, viewList, flag)
+        val arr2: ArrayList<ItemModel> = arrayListOf()
+        arr2.add(ItemModel("aaaa"))
+        viewList.add(TitleModel(R.drawable.example, "test3", "test1", arr2))
 
-        var glm = GridLayoutManager(view.context, 3)
-        view.recycler_recommend.layoutManager = glm
-        view.recycler_recommend.setHasFixedSize(true)
+        val arr3: ArrayList<ItemModel> = arrayListOf()
+        arr3.add(ItemModel("ssd"))
+        viewList.add(TitleModel(R.drawable.example, "test4", "test1", arr3))
+
+        val arr4: ArrayList<ItemModel> = arrayListOf()
+        arr4.add(ItemModel("fgff"))
+        viewList.add(TitleModel(R.drawable.example, "test5", "test1", arr4))
+
+        val arr5: ArrayList<ItemModel> = arrayListOf()
+        arr5.add(ItemModel("dsghs"))
+        viewList.add(TitleModel(R.drawable.example, "test6", "test1", arr5))
+
+        val arr6: ArrayList<ItemModel> = arrayListOf()
+        arr6.add(ItemModel("dsfya"))
+        viewList.add(TitleModel(R.drawable.example, "test7", "test1", arr6))
+
+        val arr7: ArrayList<ItemModel> = arrayListOf()
+        arr7.add(ItemModel("hjuj"))
+        viewList.add(TitleModel(R.drawable.example, "test8", "test1", arr7))
+
+        view.recycler_recommend.layoutManager = LinearLayoutManager(view.context)
+        view.recycler_recommend.adapter = ExpandableAdapter(viewList)
 
         view.btn_category_recommend.setOnClickListener {
             flag = !flag
 
             if (flag) {
-                view.recycler_recommend.adapter = RecommendRVAdapter(view.context, viewList, flag)
-
-                glm = GridLayoutManager(view.context, 3)
-                view.recycler_recommend.layoutManager = glm
+                view.recycler_recommend.layoutManager = GridLayoutManager(view.context, 3)
                 view.recycler_recommend.setHasFixedSize(true)
+                view.recycler_recommend.adapter = GridRecyclerViewAdapter(view.context, viewList)
             } else {
-                view.recycler_recommend.adapter = RecommendRVAdapter(view.context, viewList, flag)
-
-                val lm = LinearLayoutManager(view.context)
-                view.recycler_recommend.layoutManager = lm
-                view.recycler_recommend.setHasFixedSize(true)
+                view.recycler_recommend.layoutManager = LinearLayoutManager(view.context)
+                view.recycler_recommend.adapter = ExpandableAdapter(viewList)
             }
         }
 

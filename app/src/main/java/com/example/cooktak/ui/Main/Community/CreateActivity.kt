@@ -1,7 +1,7 @@
 package com.example.cooktak.ui.Main.Community
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.cooktak.R
 
 class CreateActivity : AppCompatActivity() {

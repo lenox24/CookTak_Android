@@ -4,7 +4,7 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              tools:context=".ui.Main.Barcode.BarcodeFragment">
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         <TextView
@@ -37,5 +37,5 @@
                     app:zxing_scanner_layout="@layout/custom_barcode_scanner">
             </com.journeyapps.barcodescanner.DecoratedBarcodeView>
         </LinearLayout>
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
